@@ -1,8 +1,8 @@
 questions_python = [
     {
-        "question": "What is the capital of Python?",
-        "choices": ["1. Berlin", "2. Madrid", "3. Paris", "4. Rome", "5. London"],
-        "correct_answer": ["paris", "3"]  # Both 'paris' and '3' are valid answers
+     "question": "What will the following expression return: type(None)?",
+        "choices": ["1. 'NoneType'", "2. 'int'", "3. 'str'", "4. 'object'", "5. 'boolean'"],
+        "correct_answer": ["NoneType", "1"]
     },
     {
         "question": "Which of the following is not a Python data type?",

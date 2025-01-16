@@ -1,6 +1,12 @@
 # Importing the question data from another file
 from questions_data import questions_data
 # Welcome message
+print("=---------------------------------=")
+print("     L E T' S   T R Y   Y O U R   K N O W L E D G E")
+print("        O F   J A V A S C R I P T   💻 ")
+print("=---------------------------------=")
+
+
 print("What is your name?")
 #getting the promt and assing on name 
 name = input("Enter your name: ")
