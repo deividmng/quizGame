@@ -1,7 +1,5 @@
 # Importing the question data from another file
 from questions_data import questions_data
-
-
 # Welcome message
 print("What is your name?")
 #getting the promt and assing on name 
