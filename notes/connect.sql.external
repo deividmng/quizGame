@@ -1,0 +1,25 @@
+import mysql.connector
+
+# Conexión a la base de datos
+connection = mysql.connector.connect(
+    host="localhost",        # Dirección del servidor
+    user="root",             # Tu usuario de MySQL
+    password="root",         # Tu contraseña de MySQL
+    database="company_data"  # El nombre de la base de datos
+)
+
+cursor = connection.cursor()
+
+# Ejecutar la consulta SQL para obtener todos los registros de la tabla 'employees'
+cursor.execute("SELECT * FROM employees")  # Asumiendo que la tabla se llama 'employees'
+
+# Obtener y mostrar los resultados
+results = cursor.fetchall()  # `fetchall()` obtiene todos los registros
+
+# Imprimir los resultados
+for row in results:
+    print(row)  # Muestra cada fila completa (cada fila será una tupla)
+
+# Cerrar la conexión
+cursor.close()
+connection.close()

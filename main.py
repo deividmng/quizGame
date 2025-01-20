@@ -1,4 +1,4 @@
-# Importing the question data from another file
+
 from questions_data import questions_data
 # Welcome message
 print("=---------------------------------=")
@@ -36,7 +36,7 @@ def ask_question(question, choices, correct_answer):
         if user_answer in correct_answer or user_answer in [str(choices.index(choice) + 1)
                 for choice in choices if correct_answer[0].lower() in choice.lower()]:
             print("Correct!")
-            score += 1
+            score += 1 # up 1 to the score 
         else:
             print(f"Wrong! The correct answer is {correct_answer[0]}. Try again {name}.")
     else:
