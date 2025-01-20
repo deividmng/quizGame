@@ -41,7 +41,7 @@ def insert_question(connection, question, choices, correct_answers):
     connection.commit()  # commit the changes 
     print(f"Question '{question}' Added suceffuly.")
 
-#* Actualizar una pregunta existente
+#* update a question that exists alredy 
 def update_question(connection, question_id, new_question=None, new_choices=None, new_correct_answers=None):
     cursor = connection.cursor()
 
@@ -75,7 +75,7 @@ def delete_question(connection, question_id):
     connection.commit()  # add the changes
     print(f"Pregunta con ID {question_id} eliminada correctamente.")
 
-#* Ejecución del flujo completo
+#* The word __main__ is not an arbitrary name; it is a special convention in Python.
 if __name__ == "__main__":
     # Conectar a la base de datos
     connection = connect_to_db()
