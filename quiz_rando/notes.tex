@@ -1,0 +1,78 @@
+
+
+SQLite – Python Integration Task:
+ 
+Objective
+Using the example provided I would like you to create your own SQLite database and complete the following tasks.
+Tasks
+Create a new “main.py” file.
+Import SQLite
+Create and connect to a DB called “tv_shows”
+Create a table named “shows” with the columns: id, title, genre and seasons (number of seasons)
+Write a function to add up to 5 different records to the “shows” table
+Write a function to read all records from the “shows” table
+Write a function to update a specific show’s “title”
+Write a function to delete a specific show
+has context menu
+
+
+
+
+Tasks for Managing Questions in SQLite Database:
+Set Up Database Connection:
+
+Task: Create a function connect_to_db() to connect to the SQLite database (question.db).
+Purpose: This function will return a connection to the database, which you'll use for further operations.
+Create the Questions Table:
+
+Task: Implement a function create_table(connection) that creates a questions table if it doesn't already exist.
+Table Schema:
+id: Auto-incrementing primary key.
+question: The text of the question.
+choice_1, choice_2, choice_3, choice_4: Answer choices for the question.
+correct_answer: Comma-separated string of correct answers.
+Purpose: This table will store all the quiz questions along with their choices and correct answers.
+Insert New Question:
+
+Task: Create a function insert_question(connection, question, choices, correct_answers) to insert a new question into the database.
+Parameters:
+question: The question text.
+choices: A list containing four answer choices.
+correct_answers: A list of correct answers (either option number or text).
+Purpose: To add new quiz questions to the questions table.
+Update Existing Question:
+
+Task: Create a function update_question(connection, question_id, new_question=None, new_choices=None, new_correct_answers=None) to update an existing question.
+Parameters:
+question_id: The ID of the question to update.
+new_question: New text for the question (if applicable).
+new_choices: List of new answer choices (if applicable).
+new_correct_answers: List of new correct answers (if applicable).
+Purpose: Modify a question's text, choices, or correct answers based on its ID.
+Delete Question:
+
+Task: Create a function delete_question(connection, question_id) to delete a question by its ID.
+Parameters:
+question_id: The ID of the question to delete.
+Purpose: To remove a question from the database when it's no longer needed.
+Run the Script:
+
+Task: Use the if __name__ == "__main__": block to run the script directly (not when imported as a module).
+Purpose: This will ensure that the script runs when executed directly, and helps manage the flow of operations.
+Closing the Database Connection:
+
+Task: At the end of the script, call connection.close() to close the database connection once all operations are completed.
+Purpose: This will properly close the connection to the database, preventing database locks or leaks.
+Example Sequence of Actions:
+Task: Insert a New Question:
+
+Prepare the question, choices, and correct answers.
+Call the insert_question() function to add the new question to the database.
+Task: Update an Existing Question:
+
+Select a question using its ID.
+Use the update_question() function to modify the question's text, choices, or correct answers.
+Task: Delete a Question:
+
+Request the user for the question ID they want to delete.
+Use the delete_question() function to remove the question from the database.
