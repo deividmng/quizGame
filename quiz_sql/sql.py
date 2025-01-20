@@ -1,6 +1,5 @@
 from questions_sql import questions_sql
 
-
 #getting the promt and assing on name 
 name = input("What is your name?: ")
 # Welcome message
